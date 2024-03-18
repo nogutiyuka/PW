@@ -1,0 +1,16 @@
+//Introdução DOM
+
+console.log(window.location);
+
+/*Pensar no DOM como um grande objeto.
+    - é uma interface de origramação HTML;
+    - fornece métodos para acessar a árvore de elementos
+    - o DOM fonece uma cópia do HTML
+    - pode-se manipular eventos pelo DOM para afetar o HMTL
+*/
+
+let titulo = document.getElementById("titulo1");
+
+console.log(titulo);
+
+titulo.innerText = "Modificando o texto";
