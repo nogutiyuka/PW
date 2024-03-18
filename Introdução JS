@@ -1,0 +1,58 @@
+/*JavaScript é uma linguagem de programação
+    Usaremos com REACT;
+
+- Declaração de variáveis:
+    var, let ou const
+    let e const são os mais utilizados;
+    o var tem o escopo global ou o escopo de função;
+    o let e o const tem escopo de bloco;
+
+    O const obrigatoriamente precisa de uma inicialização e não da pra alterar.
+
+    */
+
+var nome = "Frank";
+
+var nome = "José";
+
+console.log(nome);
+
+const idade = 20; //sou obrigada a inicializar a const;
+//idade = 25; //Não acusa erro, porém não executa;
+
+const pessoa = {nome: "José", idade: 30}; //Criação de objeto é com {}
+console.log(pessoa); //Irá imprimir: José, 30
+
+pessoa.nome = "Maria"; //Nesse caso eu consigo alterar as informações do objeto;
+console.log(pessoa); //Irá imprimir: Maria, 30
+
+console.log(typeof nome); //Mostra o tipo da variavel;
+
+let salario = 1500.50;
+
+console.log(typeof salario);
+
+
+/*Todas as variavieis passam por hoisting par ao topo de seu escopo*/
+
+
+for(let x = 0, y = 9; x<10; x++, y--){
+    console.log("X: ", x," Y: ", y);
+}
+
+//Declaração de função:
+function cumprimentar(nome){
+    return 'Olá, ${nome}!';
+}
+
+//Também existe o uso de ArrowFunction
+//OBS: quando tivermos funções declaradas da maneira tradicional, podemos chamar essa função antes de sua crianção, por conta do hoisting;
+//Já quando tivermos o ArrowFunction não é possivel chamar a função antes de sua criação, pois não tem hoisting;
+
+//Declaração de Array:
+let frutas = ["Maça", "Banana", "Tomate", "Melancia"];
+console.log(frutas[1]); //vai imprimir "Banana";
+
+frutas.forEach(fruta=>console.log(fruta));
+
+frutas.map((fruta, idx) =>console.log(idx+ ' '+ fruta));
