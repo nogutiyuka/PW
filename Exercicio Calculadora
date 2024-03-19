@@ -1,0 +1,35 @@
+//HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Hello JS</title>
+</head>
+<body>
+    <input type="number" id="valor1" />
+    <input type="number" id="valor2" />
+    <input type="button" value="SOMAR" onclick="somar()"/>
+
+    <p id="resultado"></p>
+
+<script src="index.js"></script>
+</body>
+</html>
+
+//JS
+let inputValor1 = document.getElementById("valor1");
+inputValor1.addEventListener('mouseover', function(){
+    alert("Olá!");
+});
+
+function somar(){
+    let valor1 = document.getElementById("valor1").value;
+    let valor2 = document.getElementById("valor2").value;
+
+    let resultado = parseFloat(valor1) + parseFloat(valor2);
+
+    let paragrafo = document.getElementById("resultado");   
+
+    paragrafo.innerText = resultado;
+}
